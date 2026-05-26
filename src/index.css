@@ -1,0 +1,489 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #0A2540;
+  --color-brand-darkBlue: #06182c;
+  --color-brand-cream: #FAF9F6;
+  --color-brand-offOrange: #F4EFE6;
+  --color-brand-accentOrange: #C2410C;
+  --color-brand-slate: #5A6E85;
+
+  --color-indigo-50: #f0f4fc;
+  --color-indigo-100: #e0eaf8;
+  --color-indigo-200: #c1d5f0;
+  --color-indigo-300: #92b5e4;
+  --color-indigo-400: #5d8fd4;
+  --color-indigo-500: #3b6ec0;
+  --color-indigo-600: #2552a3;
+  --color-indigo-700: #1e3a8a;
+  --color-indigo-800: #172e6f;
+  --color-indigo-900: #112353;
+  --color-indigo-950: #0a1535;
+
+  --font-sans: "Geist", "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "Geist Mono", monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+  
+  /* Global reset to eliminate default browser focus outlines/borders on click */
+  button:focus,
+  button:focus-visible,
+  a:focus,
+  a:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF9F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #EAE3D5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5A6E85;
+}
+
+/* Custom Glass-Light Card Style */
+.glass-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(234, 227, 213, 0.6);
+}
+
+.glass-white {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(234, 227, 213, 0.8);
+}
+
+/* Infinite Marquee Loop Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-container:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Global Subheading Font Weight Override
+   Ensures all descriptive subheading paragraphs (slate gray text `#5A6E85`)
+   render with a clean, editorial regular weight (400) instead of semibold/bold. */
+p.text-\[\#5A6E85\],
+p.text-brand-slate {
+  font-weight: 400 !important;
+}
+
+/* Custom keyframes and animations for capabilities interactive visuals */
+
+@keyframes cursorClick {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-10px, -15px) scale(1);
+  }
+  65% {
+    transform: translate(-10px, -15px) scale(0.9);
+  }
+  75% {
+    transform: translate(-10px, -15px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.animate-cursorClick {
+  animation: cursorClick 4.5s ease-in-out infinite;
+}
+
+@keyframes drawPath {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-drawPath {
+  stroke-dasharray: 100;
+  animation: drawPath 2s ease-out forwards;
+}
+
+@keyframes moveTechLeg1 {
+  0% {
+    left: 30%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    left: 70%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.animate-moveTechLeg1 {
+  animation: moveTechLeg1 3.5s ease-in-out forwards;
+}
+
+@keyframes moveTechLeg2 {
+  0% {
+    left: 70%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    left: 85%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.animate-moveTechLeg2 {
+  animation: moveTechLeg2 3.5s ease-in-out forwards;
+}
+
+@keyframes drawSignature {
+  0% {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-drawSignature {
+  animation: drawSignature 3.5s ease-in-out forwards;
+}
+
+@keyframes reportFly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  30% {
+    transform: translate(40px, -40px) scale(0.6);
+    opacity: 0;
+  }
+  31% {
+    transform: translate(-40px, 40px) scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-reportFly {
+  animation: reportFly 3s ease-in-out infinite;
+}
+
+@keyframes shutterFlash {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-shutterFlash {
+  animation: shutterFlash 1.5s ease-out forwards;
+}
+
+@keyframes scanLine {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.animate-scanLine {
+  animation: scanLine 2s linear infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+/* Custom keyframes for sectors and diagram graphics */
+
+@keyframes waveFlow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -100;
+  }
+}
+
+.animate-waveFlow {
+  stroke-dasharray: 20, 20;
+  animation: waveFlow 4s linear infinite;
+}
+
+@keyframes signalRipple {
+  0% {
+    r: 3px;
+    opacity: 0.8;
+  }
+  100% {
+    r: 25px;
+    opacity: 0;
+  }
+}
+
+.animate-signalRipple1 {
+  animation: signalRipple 2.5s ease-out infinite;
+}
+
+.animate-signalRipple2 {
+  animation: signalRipple 2.5s ease-out infinite;
+  animation-delay: 1.25s;
+}
+
+@keyframes vehicleSlide {
+  0% {
+    left: 10%;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 90%;
+  }
+}
+
+.animate-vehicleSlide {
+  animation: vehicleSlide 6s ease-in-out infinite;
+}
+
+@keyframes packetFlow {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(22px);
+    opacity: 0;
+  }
+}
+
+.animate-packetFlow {
+  animation: packetFlow 2s linear infinite;
+}
+
+@keyframes radarSweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radarSweep {
+  transform-origin: left;
+  animation: radarSweep 6s linear infinite;
+}
+
+@keyframes shutterClick {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-shutterClick {
+  animation: shutterClick 4s ease-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.2);
+    border-color: rgba(220, 38, 38, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 8px 2px rgba(220, 38, 38, 0.4);
+    border-color: rgba(220, 38, 38, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.2);
+    border-color: rgba(220, 38, 38, 0.5);
+  }
+}
+
+.animate-pulseGlow {
+  animation: pulseGlow 2s infinite;
+}
+
+/* ── Industry card icon animations ── */
+
+@keyframes spinGear {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-spinGear {
+  animation: spinGear 4s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes thermoPulse {
+  0%, 100% { transform: scaleY(1); }
+  50%       { transform: scaleY(1.15); }
+}
+.animate-thermoPulse {
+  transform-origin: bottom;
+  animation: thermoPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes truckBounce {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-4px); }
+}
+.animate-truckBounce {
+  animation: truckBounce 1.2s ease-in-out infinite;
+}
+
+@keyframes boltZap {
+  0%, 70%, 100% { opacity: 1; transform: scale(1); }
+  35%            { opacity: 0.4; transform: scale(0.85); }
+}
+.animate-boltZap {
+  animation: boltZap 1.4s ease-in-out infinite;
+}
+
+@keyframes flameFlicker {
+  0%, 100% { transform: scale(1) rotate(-3deg); }
+  33%       { transform: scale(1.1) rotate(2deg); }
+  66%       { transform: scale(0.95) rotate(-2deg); }
+}
+.animate-flameFlicker {
+  animation: flameFlicker 1.1s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes dropletDrip {
+  0%, 100% { transform: translateY(0px) scale(1); opacity: 1; }
+  60%       { transform: translateY(5px) scale(0.9); opacity: 0.5; }
+}
+.animate-dropletDrip {
+  animation: dropletDrip 2s ease-in-out infinite;
+}
+
+@keyframes wrenchWiggle {
+  0%, 100% { transform: rotate(-8deg); }
+  50%       { transform: rotate(8deg); }
+}
+.animate-wrenchWiggle {
+  animation: wrenchWiggle 1.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes signalPulse {
+  0%        { opacity: 0; transform: scale(0.3); }
+  50%       { opacity: 1; }
+  100%      { opacity: 0; transform: scale(1.4); }
+}
+.animate-signalPulse {
+  animation: signalPulse 2s ease-out infinite;
+}
+.animate-signalPulse-delay {
+  animation: signalPulse 2s ease-out 0.7s infinite;
+}
+
+@keyframes cog2Reverse {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+.animate-cogReverse {
+  animation: cog2Reverse 5s linear infinite;
+  transform-origin: center;
+}
+
+
+
