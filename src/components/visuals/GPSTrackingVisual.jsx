@@ -82,7 +82,7 @@ export default function GPSTrackingVisual() {
                 y1="70%"
                 x2="70%"
                 y2="30%"
-                stroke="#1E3A8A"
+                stroke="#1d4ed8"
                 strokeWidth="2"
                 strokeDasharray="6"
                 className="animate-drawPath"
@@ -134,7 +134,7 @@ export default function GPSTrackingVisual() {
 
             {/* SVG Path */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-              <line x1="30%" y1="70%" x2="70%" y2="30%" stroke="#1E3A8A" strokeWidth="2" />
+              <line x1="30%" y1="70%" x2="70%" y2="30%" stroke="#1d4ed8" strokeWidth="2" />
               <line
                 x1="70%"
                 y1="30%"

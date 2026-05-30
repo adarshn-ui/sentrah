@@ -231,7 +231,7 @@ export const Home = ({ onNavigate }) => {
             <div className="lg:col-span-6 relative">
 
               {/* Schematic outer bounds (100% sharp corner radius) */}
-              <div className="bg-white border border-[#EAE3D5] p-8 shadow-xs relative h-[420px] flex items-center justify-center">
+              <div className="bg-white border border-[#EAE3D5] p-4 sm:p-8 shadow-xs relative h-auto min-h-[420px] lg:h-[420px] flex items-center justify-center">
 
                 {/* Engineering Precision Crosshairs */}
                 <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t border-l border-[#5A6E85]/30"></div>
@@ -239,12 +239,12 @@ export const Home = ({ onNavigate }) => {
                 <div className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b border-l border-[#5A6E85]/30"></div>
                 <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b border-r border-[#5A6E85]/30"></div>
                 
-                {/* Center Target grid lines */}
+                {/* Center Target grid lines - hidden on mobile/tablet for clean space */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
                   <div className="w-full h-[1px] bg-[#5A6E85]"></div>
                   <div className="h-full w-[1px] bg-[#5A6E85] absolute"></div>
                 </div>
-                <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 p-8 z-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:absolute lg:inset-0 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:p-8 z-10 w-full">
                   {/* Top-Left Quadrant */}
                   <div className="flex items-center justify-center p-2">
                     {/* Floating UI Card 1: KPI Snippet */}

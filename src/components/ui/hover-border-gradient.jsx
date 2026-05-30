@@ -24,7 +24,7 @@ export function HoverBorderGradient({
           hovered ? "opacity-100 scale-105" : "opacity-40"
         }`}
         style={{
-          background: `conic-gradient(from 0deg at 50% 50%, #06b6d4 0%, #1e3a8a 25%, #06b6d4 50%, #1e3a8a 75%, #06b6d4 100%)`,
+          background: `conic-gradient(from 0deg at 50% 50%, #06b6d4 0%, #1d4ed8 25%, #06b6d4 50%, #1d4ed8 75%, #06b6d4 100%)`,
           animation: `spinBorder ${duration}s linear infinite ${
             clockwise ? "normal" : "reverse"
           }`,

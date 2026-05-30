@@ -68,7 +68,7 @@ export default function InstantReportsVisual() {
               <path
                 d="M 30,35 Q 60,10 90,45 T 150,25 T 190,40"
                 fill="none"
-                stroke="#1E3A8A"
+                stroke="#1d4ed8"
                 strokeWidth="1.8"
                 className="animate-drawSignature"
               />

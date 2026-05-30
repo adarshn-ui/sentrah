@@ -8,17 +8,17 @@
   --color-brand-accentOrange: #C2410C;
   --color-brand-slate: #5A6E85;
 
-  --color-indigo-50: #f0f4fc;
-  --color-indigo-100: #e0eaf8;
-  --color-indigo-200: #c1d5f0;
-  --color-indigo-300: #92b5e4;
-  --color-indigo-400: #5d8fd4;
-  --color-indigo-500: #3b6ec0;
-  --color-indigo-600: #2552a3;
-  --color-indigo-700: #1e3a8a;
-  --color-indigo-800: #172e6f;
-  --color-indigo-900: #112353;
-  --color-indigo-950: #0a1535;
+  --color-indigo-50: #eff6ff;
+  --color-indigo-100: #dbeafe;
+  --color-indigo-200: #bfdbfe;
+  --color-indigo-300: #93c5fd;
+  --color-indigo-400: #60a5fa;
+  --color-indigo-500: #3b82f6;
+  --color-indigo-600: #2563eb;
+  --color-indigo-700: #1d4ed8;
+  --color-indigo-800: #1e40af;
+  --color-indigo-900: #1e3a8a;
+  --color-indigo-950: #172554;
 
   --font-sans: "Geist", "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "Geist Mono", monospace;

@@ -103,7 +103,7 @@ export function SentrahSplashScreen({ onComplete }) {
         const isCyan = p.radius > 1;
         ctx.fillStyle = isCyan
           ? `rgba(6, 182, 212, ${p.opacity})` // Cyan glow
-          : `rgba(30, 58, 138, ${p.opacity})`; // Rich blue brand color
+          : `rgba(29, 78, 216, ${p.opacity})`; // Rich blue brand color
 
         ctx.fill();
       });
@@ -378,7 +378,7 @@ export function SentrahSplashScreen({ onComplete }) {
           <img 
             src="https://res.cloudinary.com/dzbudvaef/image/upload/v1779793203/Group_52_qjffst.svg" 
             alt="Sentrah Logo" 
-            className="w-64 h-16 object-contain filter drop-shadow-[0_0_12px_rgba(30,58,138,0.3)] animate-pulse"
+            className="w-64 h-16 object-contain filter drop-shadow-[0_0_12px_rgba(29,78,216,0.3)] animate-pulse"
             style={{ animationDuration: '6s' }}
           />
         </div>
